@@ -1,17 +1,29 @@
 variable "location" {
-  description = "Azure region for the resource group and Key Vault"
-  type        = string
-  default     = "eastus"
+  type    = string
+  default = "eastus"
 }
 
 variable "swa_location" {
-  description = "Static Web Apps region (limited set of regions)"
-  type        = string
-  default     = "eastus2"
+  type    = string
+  default = "eastus2"
 }
 
 variable "project_name" {
-  description = "Name prefix applied to all resources"
-  type        = string
-  default     = "ahmad-swa"
+  type    = string
+  default = "ahmad-swa"
+
+  validation {
+    condition     = can(regex("^[a-z][a-z0-9-]{1,30}$", var.project_name))
+    error_message = "project_name must be lowercase alphanumeric/hyphens, 2-31 chars."
+  }
+}
+
+variable "environment" {
+  type    = string
+  default = "dev"
+
+  validation {
+    condition     = contains(["dev", "staging", "prod"], var.environment)
+    error_message = "environment must be one of: dev, staging, prod."
+  }
 }

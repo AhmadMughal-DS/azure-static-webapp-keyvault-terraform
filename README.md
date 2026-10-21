@@ -3,7 +3,9 @@
 > A globally served static site on Azure Static Web Apps, with secrets stored in Azure Key Vault (RBAC) — provisioned with Terraform.
 > **Author:** Muhammad Ahmad · **IaC:** Terraform · **Cloud:** Azure
 
-![Terraform](https://img.shields.io/badge/Terraform-1.5%2B-7B42BC?logo=terraform&logoColor=white)
+![Terraform CI](https://github.com/AhmadMughal-DS/azure-static-webapp-keyvault-terraform/actions/workflows/terraform.yml/badge.svg)
+![Terraform](https://img.shields.io/badge/Terraform-1.6%2B-7B42BC?logo=terraform&logoColor=white)
+![Security](https://img.shields.io/badge/scanned-tfsec%20%7C%20checkov-success)
 ![Azure](https://img.shields.io/badge/Azure-Static%20Web%20Apps%20%7C%20Key%20Vault-0078D4?logo=microsoftazure&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
